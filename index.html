@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday ❤️</title>
+    
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bg-music" loop>
+    <source src="music/song.mp3" type="audio/mp3">
+</audio>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+
+        <!-- START SCREEN -->
+        <div id="start-screen" class="screen active">
+
+            <h1>Hi Abiy ❤️</h1>
+
+            <button onclick="startApp()">
+                START
+            </button>
+
+        </div>
+
+        <!-- QUESTION SCREEN -->
+        <div id="question-screen" class="screen">
+
+            <h1>Nak surprise tak?? ❤️</h1>
+
+            <div class="buttons">
+
+                <button onclick="goMenu()">
+                    YES
+                </button>
+
+                <button id="no-btn">
+                    NO
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- MENU SCREEN -->
+        <div id="menu-screen" class="screen">
+
+            <h1>PLEASE CHOOSE ❤️</h1>
+
+            <div class="menu-grid">
+
+                <div class="card" onclick="openMessage()">
+                    💌
+                    <p>Message</p>
+                </div>
+
+                <div class="card" onclick="openGallery()">
+                    📸
+                    <p>Photos</p>
+                </div>
+
+                <div class="card" onclick="openThanks()">
+                    🎁
+                    <p>Thanks</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- MESSAGE SCREEN -->
+        <div id="message-screen" class="screen">
+
+            <h1>FOR YOU ❤️</h1>
+
+            <div class="message-box">
+                <p id="message-text"></p>
+            </div>
+
+            <button onclick="nextMessage()">
+                Continue ❤️
+            </button>
+
+        </div>
+
+        <!-- GALLERY SCREEN -->
+<div id="gallery-screen" class="screen">
+
+    <h1>Cute Memories ❤️</h1>
+
+    <div class="gallery">
+
+        <img src="images/photo1.jpg">
+        <img src="images/photo2.jpg">
+        <img src="images/photo3.jpg">
+
+    </div>
+
+    <button class="continue-btn" onclick="openVideos()">
+        Next ❤️
+    </button>
+
+</div>
+
+        <!-- VIDEO SCREEN -->
+
+<div id="video-screen" class="screen">
+
+    <h1>Special Videos ❤️</h1>
+
+    <div class="video-gallery">
+
+        <video controls>
+            <source src="videos/video1.mp4" type="video/mp4">
+        </video>
+
+        <video controls>
+            <source src="videos/video2.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+    <button class="continue-btn" onclick="openThanks()">
+        Continue ❤️
+    </button>
+
+</div>
+
+        <!-- THANKS SCREEN -->
+        <div id="thanks-screen" class="screen">
+
+            <h1>Terima Kasih ❤️</h1>
+
+            <p class="ending">
+                From : dayah ❤️
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
